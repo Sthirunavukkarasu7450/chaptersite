@@ -2027,10 +2027,33 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline {
+  outline-style: solid;
+}
+
+.outline-1 {
+  outline-width: 1px;
+}
+
+.outline-slate-300 {
+  outline-color: #cbd5e1;
+}
+
 @font-face {
   font-family: "Poppins";
 
   src: url("../docs/fonts/Poppins/Poppins-Light.ttf")
+}
+
+.box {
+  height: 8rem;
+  min-height: 100%;
+  min-width: 100%;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(67 56 202 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
 .hover\:bg-indigo-700:hover {
