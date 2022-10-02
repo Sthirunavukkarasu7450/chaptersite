@@ -16,3 +16,11 @@
 		min-h-full
 		rounded;
 }
+
+.homeImg {
+	background-image: url(../docs/images/team.JPG);
+	height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
