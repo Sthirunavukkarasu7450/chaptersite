@@ -8,6 +8,69 @@
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href='../node_modules/fullcalendar/main.css' rel='stylesheet' />
+    <script src='../node_modules/fullcalendar/main.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+
+            events: [{
+                            title: 'CV/EV First Meeting',
+                            description: 'First Official TSA Meeting',
+                            start: '2022-10-05',
+                            end: '2022-10-05',
+                        }, {
+                            title: 'HS-Membership Information Due',
+                            description: 'Form on Schoology must be filled out',
+                            start: '2022-10-12',
+                            end: '2022-10-12',
+                        }, {
+                            title: 'HS-Teacher Recommendation Due',
+                            description: 'Ag, Tech Ed, or Comp Sci Teacher Recommendation Must be Complete',
+                            start: '2022-10-26',
+                            end: '2022-10-26'
+                        }, {
+                            title: 'HS-Dues Paid',
+                            description: 'TSA Club Dues Must be Paid on Skyward/Revtrak',
+                            start: '2022-10-28',
+                            end: '2022-10-28',
+                        }], 
+        });
+
+        var calendarEl2 = document.getElementById('listCalendar');
+        var calendar2 = new FullCalendar.Calendar(calendarEl2, {
+            initialView: 'listMonth',
+
+            events: [{
+                            title: 'CV/EV First Meeting',
+                            description: 'First Official TSA Meeting',
+                            start: '2022-10-05',
+                            end: '2022-10-05',
+                        }, {
+                            title: 'HS-Membership Information Due',
+                            description: 'Form on Schoology must be filled out',
+                            start: '2022-10-12',
+                            end: '2022-10-12',
+                        }, {
+                            title: 'HS-Teacher Recommendation Due',
+                            description: 'Ag, Tech Ed, or Comp Sci Teacher Recommendation Must be Complete',
+                            start: '2022-10-26',
+                            end: '2022-10-26'
+                        }, {
+                            title: 'HS-Dues Paid',
+                            description: 'TSA Club Dues Must be Paid on Skyward/Revtrak',
+                            start: '2022-10-28',
+                            end: '2022-10-28',
+                        }], 
+        });
+        calendar2.render();
+        calendar.setOption('aspectRatio', 1.8),
+        calendar.render();
+        });
+  
+      </script>
 </head>
 
 <body class="font-Poppins bg-base-100">
@@ -60,13 +123,13 @@
         <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="">
-                    <h1 class="text-3xl md:text-9xl md:font-bold text-white">Cumberland Valley TSA</h1>
-                    <button class="btn btn-primary hover:bg-primary-focus"><a href="#start">Get Started</a></button>
+                    <h1 class="text-3xl md:text-9xl md:font-bold text-white animate__animated animate__fadeIn animate__slower">Cumberland Valley TSA</h1>
+                    <button class="btn btn-primary hover:bg-primary-focus animate__animated animate__fadeIn animate__slower animate__delay-1s"><a href="#start">Get Started</a></button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="">
+    <div class="md:p-5 p-3 bg-accent">
         <h1 id="start" class="mb-5 text-2xl md:text-6xl text-primary m-4 md:ml-10 md:mt-10 text-center md:text-left">
             What is TSA?
         </h1>
@@ -82,7 +145,7 @@
         </div>
     </div>
 
-    <div class="bg-secondary-focus text-accent">
+    <div class="text-primary p-3 md:p-5">
         <h1 id="start" class="mb-5 text-2xl md:text-6xl m-4 md:ml-10 md:mt-10 text-center md:text-left">
             Events
         </h1>
@@ -96,42 +159,64 @@
         </div>
     </div>
     
-    <div class="">
-        <h1 id="start" class="mb-5 text-2xl md:text-6xl text-primary m-4 md:ml-10 md:mt-10 text-center md:text-left">
+    <div class="bg-secondary-focus text-accent p-3 md:p-5">
+        <h1 id="" class="mb-5 text-2xl md:text-6xl m-4 md:ml-10 md:mt-10 text-center md:text-left">
             Important Resources:
         </h1>
-        <div class="grid grid-cols-2 gap-8 m-4 md:ml-10 text-primary-focus">
-            <div class="text-sm text-center md:text-left md:text-3xl col-span-2 md:col-span-1">
+        <div class="grid grid-cols-2 m-4 md:ml-10">
+            <div class="text-sm text-center md:text-left md:text-3xl col-span-2 md:col-span-1 md:border-r-2">
                 <div class="grid grid-cols-5">
                     <div class="col-span-1"></div>
-                    <img src="../docs/images/Technology_Student_Association_Emblem.svg.png" alt="TSA.logo" class="w-1/2 col-span-3">
+                    <img src="../docs/images/Technology_Student_Association_Emblem.svg.png" alt="TSA.logo" class="col-span-3">
                     <div class="col-span-1"></div>
                 </div>
-                <p>
+                <div class="text-center">
+                    <a href="https://tsaweb.org" class="text-center link transition ease-in-out delay-300 duration-1000 hover:text-white motion-reduce:transition-none">National TSA Website</a>
+                    <br>
                     Rulebooks, national conference dates, themes and problems can be found here. 
-                </p>
+                </div>
             </div>
-            <div class=" col-span-2 md:col-span-1">
-                <img src="../docs/images/patsa logo.png" alt="PATSA.logo" class="">
-                <a href="https://www.patsa.org">PA TSA Website</a>
-                <p>
-                    All state based information such as regional conference dates, submission times, feedback forms, etc. will be found here.
-                </p>
+            <div class="text-sm text-center md:text-left md:text-3xl col-span-2 md:col-span-1 md:border-l-2">
+                <div class="grid grid-cols-5">
+                    <div class="col-span-1"></div>
+                    <img src="../docs/images/PA TSA BIG.png" alt="TSA.logo" class="col-span-3">
+                    <div class="col-span-1"></div>
+                </div>
+                <div class="text-center">
+                    <a href="https://patsa.org" class="text-center link transition ease-in-out delay-300 duration-1000 hover:text-white motion-reduce:transition-none">PATSA Website</a>
+                    <br>
+                    Everything state-related will be found here such as conference dates, PA only events, feedback forms, etc. 
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="footer footer-center p-10 bg-primary text-primary-content">
+    <div class="text-primary p-3 md:p-5">
+        <h1 class="mb-5 text-2xl md:text-6xl m-4 md:ml-10 md:mt-10 text-center md:text-left">
+            Upcoming Events
+        </h1>
+        <div class="justify-center p-3 md:p-5">
+            <div class="md:hidden p-3 md:p-5">
+                <div id="listCalendar"></div>
+            </div>
+            <div class="hideCal p-3 md:p-5">
+                <div id="calendar"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer footer-center p-10 text-secondary-focus bg-accent">
         <div>
-            <img src="../docs/images/patsa logo.png" alt="">
+            <img src="../docs/images/CVTSA logo.png" alt="" class="w-1/6">
             <p class="font-bold">CVTSA</p>
+            <p class="font-thin">Website Built by the 2022-2023 CV TSA Chapter Officers</p>
         </div> 
         <div>
           <div class="grid grid-flow-col gap-4">
-            <a href="http://"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <a href="https://www.instagram.com/cvhstsa/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
               </svg></a>
-              <a href="">
+              <a href="https://www.facebook.com/CVHSTSA">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                     <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                   </svg>
