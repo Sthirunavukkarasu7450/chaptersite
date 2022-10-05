@@ -2270,6 +2270,14 @@ html {
   background-size: cover;
 }
 
+.officerImg {
+  background-image: url(../docs/images/IMG_7674.jpeg);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media screen and (max-width: 768px) {
   .hideCal {
     display: none;
